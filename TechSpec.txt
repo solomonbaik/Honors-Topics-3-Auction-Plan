@@ -1,0 +1,38 @@
+Objects:
+Auction
+Bid
+
+Auction class
+{
+double currentPrice
+int timeLeftToBidInBlocks
+File nft
+List bids
+int numOfExtensions
+Auction (double startingPrice, int lengthOfBiddingPeriodInBlocks, File nft)
+{
+	//creates new auction for the NFT in question with a set starting price and auction length
+	//stores above variables within the Auction object
+}
+void bid(Bid newBid)
+{
+	//rejects the bid if <=currentPrice
+	//extends the timeLeftToBidInBlocks as necessary, increasing numOfExtensions if so
+}
+
+
+}
+
+Bid class
+{
+Bid (Address bidder, double bidAmount)
+{
+//Stores the bidder's address and amount they are bidding 
+}
+}
+
+/**
+*Impossible Features:
+*taking 0.5 wolvercoin after auction closes; might be possible if required to spend in order to create bid
+*
+*/
