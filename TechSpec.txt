@@ -29,7 +29,7 @@ void bid(Bid newBid)
 }
 void close()
 {
-	//can only be called by seller or when time runs out
+	//can only be called by seller/Solomon or when time runs out
 	//finalizes bid list
 	//wait for event where a new block contains correctly-valued transaction from buying address of winner to seller and to Solomon's wallet, then transfer ownership of NFT
 }
