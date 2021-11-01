@@ -11,16 +11,33 @@ List bids
 int numOfExtensions
 Auction (double startingPrice, int lengthOfBiddingPeriodInBlocks, File nft)
 {
+	//checks that parameters are within good values, NFT is owned by the owner
 	//creates new auction for the NFT in question with a set starting price and auction length
 	//stores above variables within the Auction object
+}
+main()
+{
+	//listen for bids, blocks mined, and close
+	//if a block is mined, decrease timeLeft
+	//if a bid is placed or the auction is closed, call relevant methods
 }
 void bid(Bid newBid)
 {
 	//rejects the bid if <=currentPrice
-	//extends the timeLeftToBidInBlocks as necessary, increasing numOfExtensions if so
+	//extends the timeLeftToBidInBlocks if less than an hour left, increasing numOfExtensions until 10 if so
+	//adds the bid to the end of list of bids
 }
-
-
+void close()
+{
+	//can only be called by seller or when time runs out
+	//finalizes bid list
+	//wait for event where a new block contains correctly-valued transaction from buying address of winner to seller and to Solomon's wallet, then transfer ownership of NFT
+}
+double getCurrentPrice()
+{
+	//can be called by anyone
+	//returns the bidAmount of the last bid in the list
+}
 }
 
 Bid class
@@ -29,6 +46,9 @@ Bid (Address bidder, double bidAmount)
 {
 //Stores the bidder's address and amount they are bidding 
 }
+-
+relevant getters
+-
 }
 
 /**
